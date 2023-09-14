@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 태그 수업 2</title>
+</head>
+<body>
+    <!-- 현재 위치 : C:\Users\SBA\Desktop\github\SeSAC-KJB\HtmlCssJs
+        ./dog.webp : 현재 위치에 있는 "dog.webp" 파일에 접근
+        ../ : 한 단계 앞 위치에 있는 폴더로 이동
+
+     -->
+
+                 
+    <!-- target : self는 기존창에서 새로고침
+         target : blank는 새 창으로 -->
+     <a href="https://www.google.com/" target="_self">
+     <img src="./dog.webp" 
+         alt="강아지입니다."
+         title="카페" 
+         width="100"
+         height="100" />
+    </a>
+    <hr />
+
+    <h2>회원가입</h2>
+    <form>
+        이름 : <input type="text" name="name" />
+        <br />
+        이메일 : <input type="text" name="email" />
+        <br />
+        비밀번호 : <input type="password" name="pw" />
+        <br />
+        비밀번호 확인 : <input type="password" name="pw_check" />
+        
+        <input type="button" value="제출"/>
+        <button>제출</button>
+        <br />
+        취미를 선택하세요.
+        <input type="checkbox" name="hobby" value="축구"/>축구
+        <input type="checkbox" name="hobby" value="야구"/>야구
+        <input type="checkbox" name="hobby" value="농구"/>농구
+        <!-- value는 같게 -->
+        <br />
+
+        성별을 선택하세요.
+        <input type="radio" name="gender" value="남성"/> 남성
+        <input type="radio" name="gender" value="여성"/> 여성
+        <br />
+
+        15세 이상인가요?
+        <input type="radio" name="age" value="예"/> 예
+        <input type="radio" name="age" value="아니요"/> 아니요
+
+        <br />
+        생년월일 : <input type="date" name="birth" />
+        <br />
+        색 : <input type="color" name="color" />
+        <br />
+        range : <input type="range" name="range" /> 
+        <br />
+        file : <input type="file" name="img" />
+        <br />
+        <select name="select_option">
+            <optgroup label="옵션 1~2">
+                <option value="option1">옵션 1</option>
+                <option value="option2">옵션 2</option>
+            </optgroup>
+            <optgroup label="옵션 3~4">
+                <option value="option3">옵션 3</option>
+                <option value="option4">옵션 4</option>
+            </optgroup>    
+        </select>
+
+    </form>
+
+</body>
+</html>
