@@ -37,3 +37,42 @@
 .fruits *:not(span) {
     background-color: aqua;
 }
+
+/* ::before */
+div.before-el::before {
+    content: "택시";
+}
+/* ::after */
+div.after-el::after {
+    content: "빨리";
+    color: white;
+    font-size: 12px;
+    background-color: red;
+    border-radius: 2px;
+}
+/* content가 필수 */
+
+input[name=name] {
+    background-color: orange;
+}
+
+.fruits-3 > .wm-3 {
+    color:blue;
+}
+
+
+.wm-3 {
+    color: red;
+}
+
+input:disabled {
+    background-color: red;
+}
+
+[placeholder="이름"] {
+    background-color: orange;
+}
+
+input:not([placeholder]){
+    background-color: blue;
+}
