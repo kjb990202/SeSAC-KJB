@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: beige;
+}
+/* relative */
+.box {
+    /* static 기본값 */
+    /* position: static; */
+    width: 100px;
+    height: 100px;
+}
+
+.item-1 {
+    position: relative;
+    top: 30px;
+    left: 50px;
+    background-color: red;
+}
+
+.item-2 {
+    position: absolute;
+    bottom: 100px;
+    right: 30px;
+    background-color: orange;
+}
+
+.item-3 {
+    position: fixed;
+    top: 100px;
+    right: 100px;
+    background-color: yellow;
+}
