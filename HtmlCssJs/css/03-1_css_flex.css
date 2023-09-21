@@ -1,0 +1,39 @@
+.container-1 {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: aqua;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    
+}
+
+.container-1-2 {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+/* 묶음 정렬 */
+.container-2 {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+    justify-content: space-between;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    background-color: black;
+}
