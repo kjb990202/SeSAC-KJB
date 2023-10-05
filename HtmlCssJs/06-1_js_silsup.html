@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단 계산기</title>
+</head>
+<body>
+    <form>
+        <div>값1 :<input type="number" id="value1"/></div>
+        <div>값2 :<input type="number" id="value2"/></div>
+        <div>연산자 :<input type="text" id="calculate"/></div>
+        <div>결과 :<input type="number" id="result" readonly/></div>
+        <!-- readonly : 사용자가 값을 바꿀 수 없음 -->
+    </form>
+
+    <button type="button" onclick="cal()">계산하기</button>
+    <input type="reset" id="초기화" />
+    <script>
+
+        function cal() {
+            const value1 = Number(document.getElementById("value1").value); // 값1의 id값을 가져옴
+            const value2 = Number(document.getElementById("value2").value);
+            const calculate = document.getElementById("calculate").value;
+            let result;
+            
+            switch(calculate) {
+                case "+" :
+                    result = value1 + value2;
+                    break;
+                case "-" :
+                    result = value1 - value2;
+                    break;
+                case "*" :
+                    result = value1 * value2;
+                    break;
+                case "/" :
+                    result = value1 / value2;
+                    break;
+                
+                    alert("오류")
+                }
+            document.getElementById("result").value = result;
+        }
+    
+        
+    </script>
+</body>
+</html>
