@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+<body>
+    <%=name %>
+
+    <%-"include("header.ejs") %>
+
+    <!-- ejs 태그 안에 오늘 자바스크립트 코드는 한 줄로 끝나야 함. -->
+    <% for(let i = 0; i < product.length; i++) { %>
+
+    <!-- ejs 태그 안에 바로 = 이 오면 = 뒤에 있는 변수나 값을 html로 노출시킨다. -->
+    <div>상품 <%=product[i] %></div>
+    <% } %>
+  
+
+    <%-"include("index.ejs") %>
+
+    <!-- ejs 태그 안에 바로 = 이 오면 = 뒤에 있는 변수나 값을 html로 노출시킨다. -->
+    <%="hello lily" %>
+
+    <!-- ejs 태그 안에 바로 - 가 오면 - 뒤에 있는 변수나 값을 html로 노출시킨다, (html 태그) -->
+    <%=<div>안녕</div> %>
+    <%-<div>안녕</div> %>
+
+    <script>
+        // 백엔드에서 넘겨준 product는
+    </script>
+</body>
+</html>
