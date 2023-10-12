@@ -58,3 +58,26 @@ const word2 = "xyz";
 
 const word = [...word1, ...word2];
 console.log(word);
+
+const obj2 = {
+    name : "lily",
+    gender : "여",
+    age : 99,
+};
+
+const obj3 = {
+    ...obj2, 
+    test: "test",
+};
+console.log("obj", obj3);
+
+const values = [10, 20, 30];
+function get(a, ...rest) {
+    console.log("a", a); // 10
+    console.log("rest", rest); // [ 20, 30 ]
+}
+
+get(...values);
+
+// ...[10, 20, 30] => 10, 20, 30
+// get(10, 20, 30);
