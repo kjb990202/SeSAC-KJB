@@ -77,6 +77,14 @@ app.post(
   }
 );
 
+app.post(
+  "/upload/dynamic",
+  uploadDetail.single("userfile0"),
+  function (req, res) {
+    res.send({ src : req.file.path })
+}
+);
+
 app.listen(PORT, function () {
   console.log(`Sever Open: ${PORT}`);
 });

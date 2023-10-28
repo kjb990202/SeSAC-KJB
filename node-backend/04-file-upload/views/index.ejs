@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>파일 업로드</title>
   </head>
   <body>
@@ -51,12 +52,47 @@
       <button type="submit">업로드</button>
     </form>
 
+    <h2>동적 폼 전송(axios)를 이용한 파일 업로드</h2>
+    <form name="dynamic-upload">
+      <input type="file" name="userfile" />
+      <br />
+      <input type="text" name="title" />
+      <br />
+      <button type="button" onclick="dynamicUpload()">업로드</button>
+    </form>
+    <div id="dynamic-upload"></div>
 
-    <!-- fetch를 이용한 동적 폼 전송의 content-type 지정 -->
-  </body>
-</html>
+    <script>
+      function dynamicUpload() {
+        const form = document.forms["dynamic-upload"];
 
+        const formData = new FormData();
+        // FormData객체의 append 메소드는 데이터를 추가할 때 사용
+        formData.append("title", form.title.value);
+        // type이 file인 input태그를 선택해서 files에 접근을 해보면
+        console.log("files", form.userfile.flies);
+        console.log("value", form.userfile.value);
+        formData.append("userfile", form.userfile.file[0])
+        // 아래 방식은 이미지 데이터를 정상적으로 처리할 수 없음.
+        // const data = {
+        //    title : form.title.value
+        //    userfile : form.userfile.value
+        // }
 
+        axios({
+          method:"post",
+          url: "/upload/dynamic",
+          // data
+          headers: {
+            "Content-type" : "multipart/form-data"
+          }
+        }).then((res)=>{
+          console.log(res.data)
+          const result = document.getElementById("dynamic-upload-result")
+            result.innerHTML = `<img src="/${res.data.src}" width="150"/>`
+        })
+      }
+    </script>
 
 
 
