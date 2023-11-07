@@ -26,11 +26,8 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>
-              
-
-
-              
+            <th>작성자</th>
+            <th>방명록</th>
             <th>수정</th>
             <th>삭제</th>
           </tr>
@@ -126,7 +123,7 @@
 
       function editDo(id) {
         const form = document.forms['form-visitor'];
-        
+
         axios({
             method: 'patch',
             url: '/visitor',

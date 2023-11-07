@@ -1,4 +1,4 @@
-const Visitor = require("../model/Visitor");
+const Visitor = require("../model/Visitor_mysql");
 
 exports.home = (req, res) => {
   res.render("index");
@@ -49,6 +49,4 @@ exports.patchVisitor = (req, res) => {
     console.log("ctrl getVisitorById: patchVisitor", result);
     res.send({ result: true });
   });
-  
-  
-}; 
+};

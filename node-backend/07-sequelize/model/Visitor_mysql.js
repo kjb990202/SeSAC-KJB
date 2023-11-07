@@ -58,10 +58,6 @@ exports.delVisitor = (id, cb) => {
 
     console.log("visitor delete", result);
     cb(flag);
-
-
-
-    
     // cb(true);
   });
 };

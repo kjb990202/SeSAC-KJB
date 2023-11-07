@@ -1,26 +1,17 @@
-const express = require("express");
-const router = express.Router();
-const controller = require("../controller/Cuser");
+const express = require('express')
+const user = require('../controller/Cuser')
+const router = express.Router()
 
+router.get('/', user.index)
 
-router.get("/", controller.home);
+router.get('/signup', user.signup)
+router.post('/signup', user.post_signup)
 
+router.get('/signin', user.signin)
+router.post('/signin', user.post_signin)
 
-router.get("/visitors", controller.user);
-
-// 회원 가입
-router.post("/user", controller.postUser);
-
-// 회원정보 수정
-router.patch("/user/:id", function (req, res) {
-  res.send("");
-});
-
-// 회원 탈퇴
-router.delete("/user/:id", controller.deleteUser);
+router.post('/profile', user.profile)
+router.patch('/profile/edit/:id', user.profile_edit)
+router.delete('/profile/delete/:id', user.profile_delete)
 
 module.exports = router;
-
-
-
-

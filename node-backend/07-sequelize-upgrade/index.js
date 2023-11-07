@@ -3,12 +3,12 @@ const app = express();
 const port = 8000;
 
 app.set("view engine", "ejs");
-app.use( "/static", express.static( "static" ) );
+app.use( "/static", express.static(__dirname + "static" ) );
 app.use(express.urlencoded({extended: true}));
 app.use( express.json() );
 
-const router = require("./routes/user");
-app.use('/user', userrouter);
+const router = require("./routes")
+app.use("/", router);
 
 app.get('*', (req,res) =>{
     res.send("접근할 수 없는 주소입니다.");
@@ -17,4 +17,3 @@ app.get('*', (req,res) =>{
 app.listen(port, ()=>{
     console.log( "Server Port : ", port );
 });
-
