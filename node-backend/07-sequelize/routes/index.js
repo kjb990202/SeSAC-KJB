@@ -23,4 +23,3 @@ router.get("/visitor/:id", controller.getVisitorById);
 router.delete("/visitor/:id", controller.deleteVisitor);
 
 module.exports = router;
-0

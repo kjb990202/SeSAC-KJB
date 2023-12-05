@@ -17,6 +17,7 @@ router.patch("/visitor", controller.patchVisitor);
 
 // 방명록 하나 조회
 router.get("/visitor/:id", controller.getVisitorById);
+
 // 방명록 삭제
 router.delete("/visitor/:id", controller.deleteVisitor);
 

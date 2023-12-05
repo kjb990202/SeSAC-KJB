@@ -1,0 +1,23 @@
+/* BEM 네이밍 규칙 */
+.FuncComponent__test-css--active {
+}
+
+.test-css {
+  background-color: yellow;
+  font-size: 30px;
+}
+
+/* jpx 실습 */
+.HW-color {
+  background-color: aquamarine;
+  width: 220px;
+}
+
+.Section__secion {
+  margin-bottom: 20px;
+  border: 2px solid blue;
+}
+
+.food {
+  color: red;
+}
