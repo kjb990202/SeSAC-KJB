@@ -1,0 +1,23 @@
+.body {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@mixin body($id, $pos) {
+  @keyframes ani#{$id} {
+    from {
+      top: 0px;
+    }
+    to {
+      top: $pos;
+    }
+  }
+}
+
+@include body(1, 30px);
+
+@include body(2, 50px);
+
+@include body(3, 100px);

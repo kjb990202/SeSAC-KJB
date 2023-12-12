@@ -15,7 +15,7 @@ function App() {
         {isShow ? 'OFF' : 'ON'}
       </button> */}
       {/* {isShow && <LifeCycle number={number} />} */}
-      {/* {isShow && <LifeCycleClass number={number} />} */}
+      {isShow && <LifeCycleClass number={number} />}
       {<PostList />}
     </div>
   );
