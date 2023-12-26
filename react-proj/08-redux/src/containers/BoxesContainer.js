@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Box1, Box2, Box4 } from '../components/Boxes';
-import { increase, decrease, inM, outM } from '../store/counterReducer';
+import { increase, decrease } from '../store/counterReducer';
 
 export function Box1Container() {
   const number = useSelector((state) => state.counter.number);
@@ -19,8 +19,6 @@ export function Box4Container() {
   const counterIncrease = () => dispatch(increase());
   const counterDecrease = () => dispatch(decrease());
   const isDataChange = () => dispatch({ type: 'CHANGE' });
-  const inM = () => dispatch(inM());
-  const outM = () => dispatch(outM());
 
   return (
     <Box4
@@ -29,8 +27,6 @@ export function Box4Container() {
       counterIncrease={counterIncrease}
       counterDecrease={counterDecrease}
       isDataChange={isDataChange}
-      inM={inM}
-      outM={outM}
     />
   );
 }

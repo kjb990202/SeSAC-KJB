@@ -74,19 +74,21 @@
 // ver4. 리덕스 구조화 + containers 컴포넌트 폴더 / presentational 컴포넌트 폴더 분리
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
-import AppRedux3 from './AppRedux3';
+import App from './App';
+// import AppRedux3 from './AppRedux3';
 
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import rootReducer from './store';
-
-const store = configureStore({ reducer: rootReducer }, composeWithDevTools());
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const store = configureStore({ reducer: rootReducer }, composeWithDevTools());
+
 root.render(
   <Provider store={store}>
-    <AppRedux3 />
+    <App />
   </Provider>
 );

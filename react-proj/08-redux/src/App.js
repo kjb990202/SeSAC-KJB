@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './App.css';
+import { BankContainer } from './containers/BankContainers';
 
 function App() {
   return (
-    <div>
-      <Box1 />
+    <div className="App">
+      <BankContainer />
     </div>
   );
 }

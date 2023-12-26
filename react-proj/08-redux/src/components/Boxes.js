@@ -34,22 +34,8 @@ export function Box4(props) {
       <h3>number: {number}</h3>
       <button onClick={counterIncrease}>plus</button>
       <button onClick={counterDecrease}>minus</button>
-      <input type="number" value="number" />
-      <button onClick={inM}>입금</button>
-      <button onClick={outM}>출금</button>
       <div>isData {`${isData}`}</div>
       <button onClick={isDataChange}>변경</button>
-    </div>
-  );
-}
-
-export function Bank(props) {
-  const { inM, outM } = props;
-  return (
-    <div className="account">
-      <input type="number" value="" />
-      <button onClick={inM}>입금</button>
-      <button onClick={outM}>출금</button>
     </div>
   );
 }
